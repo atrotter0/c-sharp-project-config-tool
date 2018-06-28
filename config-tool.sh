@@ -55,28 +55,56 @@ then
   echo Creating directory $directoryName and building C# project...
 
   # Build directories and copy assets
+  solution='.Solution'
+  projectName=$directoryName$solution
+
   cd
   cd Desktop
-  mkdir $directoryName.Solution
-  cd $directoryName.Solution
-  cp $baseDirectory/assets/Project ~/Desktop/$directoryName
-  cp $baseDirectory/assets/Project.Tests ~/Desktop/$directoryName
-  cp $baseDirectory/assets/README.md ~/Desktop/$directoryName
+  mkdir $projectName
+  cd $projectName
+  cp -R $baseDirectory/assets/Project ~/Desktop/$projectName
+  cp -R $baseDirectory/assets/Project.Tests ~/Desktop/$projectName
+  cp $baseDirectory/assets/README.md ~/Desktop/$projectName
 
   # Rename folders and cs files
   mv Project $directoryName
   mv Project.Tests $directoryName.Tests
   mv $directoryName/Models/ClassName.cs $directoryName/Models/$className.cs
+  mv $directoryName/Project.csproj $directoryName/$directoryName.csproj
   mv $directoryName.Tests/ModelTests/ClassName.Tests.cs $directoryName.Tests/ModelTests/$className.Tests.cs
+  mv $directoryName.Tests/Project.Tests.csproj $directoryName.Tests/$directoryName.Tests.csproj
 
   # Initialize git
   git init
   sleep 2
   git pair $user1Initials $user2Initials
 
+  # Add content to Tests.csproj
+  cd $directoryName.Tests/
+  echo '<Project Sdk="Microsoft.NET.Sdk">' >> $directoryName.Tests.csproj
+  echo '' >> $directoryName.Tests.csproj
+  echo '  <PropertyGroup>' >> $directoryName.Tests.csproj
+  echo '    <TargetFramework>netcoreapp1.1</TargetFramework>' >> $directoryName.Tests.csproj
+  echo '  </PropertyGroup>' >> $directoryName.Tests.csproj
+  echo '  <ItemGroup>' >> $directoryName.Tests.csproj
+  echo '    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.0.0" />' >> $directoryName.Tests.csproj
+  echo '    <PackageReference Include="MSTest.TestAdapter" Version="1.2" />' >> $directoryName.Tests.csproj
+  echo '    <PackageReference Include="MSTest.TestFramework" Version="1.2" />' >> $directoryName.Tests.csproj
+  echo '  </ItemGroup>' >> $directoryName.Tests.csproj
+  echo '' >> $directoryName.Tests.csproj
+  echo '  <ItemGroup>' >> $directoryName.Tests.csproj
+  echo '    <ProjectReference Include="..\'$directoryName'\'$directoryName.csproj'" />' >> $directoryName.Tests.csproj
+  echo '  </ItemGroup>' >> $directoryName.Tests.csproj
+  echo '</Project>' >> $directoryName.Tests.csproj
+
+  # Run dotnet restore
+  echo Running dotnet restore. This may take a few seconds...
+  dotnet restore
+  sleep 10
+
   # Navigate to and open project in finder
-  cd ..
-  open $directoryName
+  cd ../../
+  open $projectName
   echo Process complete! Your C# project has been created!
 else
   echo Goodbye!
