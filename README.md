@@ -1,4 +1,4 @@
-# Project Configuration Tool
+# C# Project Configuration Tool
 
 #### By Abel Trotter, 06.27.2018
 
