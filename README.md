@@ -13,7 +13,7 @@ A simple bash script to create Epicodus C# projects and intialize the git pairs 
 1. Run $ chmod 777 ./config-tool.sh
 1. Run $ ./config-tool.sh
 1. Follow the prompt
-1. Run `dotnet test` from the Project.Tests directory
+1. Run `dotnet test` from the Project.Tests directory to ensure the project has been built correctly.
 
 ## Usage
 

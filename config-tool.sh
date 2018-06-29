@@ -48,7 +48,7 @@ then
   echo Please enter the name of the class you want to create - this needs to be different from your project name:
   read className
 
-  echo Please enter both pair initials:
+  echo Please enter both pair initials, or hit enter to skip:
   echo example: gt lg
   read user1Initials user2Initials
 
