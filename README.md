@@ -13,20 +13,20 @@ A simple bash script to create Epicodus C# projects and intialize the git pairs 
 1. Run $ chmod 777 ./config-tool.sh
 1. Run $ ./config-tool.sh
 1. Follow the prompt
-1. After the finder window opens, modify the class names and namespaces in both .cs files
-1. Run `dotnet test` from with the ModelTests directory
+1. Run `dotnet test` from the ProjectName.Tests directory
 
 ## Usage
 
 This can:
-* Set up your git pairs file at the root directory
-* Create a basic C# project structure that includes:
+* Option to set up your git pairs file at the root directory
+* Option to create a basic C# project structure that includes:
   * Models directory
   * ModelTests directory
   * csproj files
+  * .cs files
   * README.md
-  * Runs `dotnet restore`
 * Initialize git and git pair in project directory
+* Runs `dotnet restore`
 
 ## Contribution Requirements
 
