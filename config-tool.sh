@@ -79,6 +79,40 @@ then
   sleep 2
   git pair $user1Initials $user2Initials
 
+  # Add content to ClassName.cs
+  echo 'using System;' >> $directoryName/Models/$className.cs
+  echo 'using System.Collections.Generic;' >> $directoryName/Models/$className.cs
+  echo '' >> $directoryName/Models/$className.cs
+  echo 'namespace '$directoryName >> $directoryName/Models/$className.cs
+  echo '{' >> $directoryName/Models/$className.cs
+  echo '    public class '$className >> $directoryName/Models/$className.cs
+  echo '    {' >> $directoryName/Models/$className.cs
+  echo '        public bool DoIPass()' >> $directoryName/Models/$className.cs
+  echo '        {' >> $directoryName/Models/$className.cs
+  echo '            return true;' >> $directoryName/Models/$className.cs
+  echo '        }' >> $directoryName/Models/$className.cs
+  echo '    }' >> $directoryName/Models/$className.cs
+  echo '}' >> $directoryName/Models/$className.cs
+
+  # Add content to ClassName.Tests.cs
+  echo 'using Microsoft.VisualStudio.TestTools.UnitTesting;' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo 'using System;' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo 'using System.Collections.Generic;' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo 'using '$directoryName';' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo 'namespace '$directoryName'.Tests' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo '{' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo '    [TestClass]' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo '    public class '$className'Test' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo '    {' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo '        [TestMethod]' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo '        public void DoIPass_TestToSeeIfThisWorks_True()' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo '        {' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo '            '$className' newObject = new '$className'();' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo '            Assert.AreEqual(true, newObject.DoIPass());' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo '        }' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo '    }' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+  echo '}' >> $directoryName.Tests/ModelTests/$className.Tests.cs
+
   # Add content to Tests.csproj
   cd $directoryName.Tests/
   echo '<Project Sdk="Microsoft.NET.Sdk">' >> $directoryName.Tests.csproj
