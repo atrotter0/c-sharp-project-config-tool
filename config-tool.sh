@@ -65,6 +65,7 @@ then
   cp -R $baseDirectory/assets/Project ~/Desktop/$projectName
   cp -R $baseDirectory/assets/Project.Tests ~/Desktop/$projectName
   cp $baseDirectory/assets/README.md ~/Desktop/$projectName
+  cp $baseDirectory/assets/.gitignore ~/Desktop/$projectName
 
   # Rename folders and cs files
   mv Project $directoryName
@@ -79,6 +80,7 @@ then
   sleep 2
   git pair $user1Initials $user2Initials
 
+  # Models
   # Add content to ClassName.cs
   echo 'using System;' >> $directoryName/Models/$className.cs
   echo 'using System.Collections.Generic;' >> $directoryName/Models/$className.cs
