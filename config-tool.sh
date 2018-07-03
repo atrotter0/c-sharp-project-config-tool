@@ -70,10 +70,7 @@ then
   # Rename folders and cs files
   mv Project $directoryName
   mv Project.Tests $directoryName.Tests
-  mv $directoryName/Models/ClassName.txt $directoryName/Models/$className.cs
   mv $directoryName/Project.csproj $directoryName/$directoryName.csproj
-  mv $directoryName.Tests/ModelTests/ClassName.Tests.cs $directoryName.Tests/ModelTests/$className.Tests.cs
-  mv $directoryName.Tests/Project.Tests.csproj $directoryName.Tests/$directoryName.Tests.csproj
 
   # Initialize git
   git init
@@ -109,9 +106,6 @@ then
   rm $directoryName/Controllers/HomeController2.txt
   rm $directoryName/Models/ClassName.txt
   rm $directoryName/Models/ClassName2.txt
-
-  # Models
-
 
   # Add content to ClassName.Tests.cs
 
