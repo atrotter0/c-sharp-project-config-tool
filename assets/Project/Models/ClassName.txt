@@ -1,0 +1,10 @@
+using System;
+using System.Collections.Generic;
+
+namespace ProjectNameHere.Models
+{
+    public class ClassNameHere
+    {
+        
+    }
+}
