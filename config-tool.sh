@@ -80,6 +80,18 @@ then
   sleep 2
   git pair $user1Initials $user2Initials
 
+  # Replace ProjectNameHere in Program.cs and Startup.cs
+  OLD_PROJECT="ProjectNameHere"
+  NEW_PROJECT=$directoryName
+
+  # Program and Startup
+  sed "s/$OLD_PROJECT/$NEW_PROJECT/g" $directoryName/Program.txt > $directoryName/Program.cs
+  sed "s/$OLD_PROJECT/$NEW_PROJECT/g" $directoryName/Startup.txt > $directoryName/Startup.cs
+
+  # Remove base text files
+  rm $directoryName/Program.txt
+  rm $directoryName/Startup.txt
+
   # Models
   # Add content to ClassName.cs
   echo 'using System;' >> $directoryName/Models/$className.cs

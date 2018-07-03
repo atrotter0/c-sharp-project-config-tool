@@ -20,6 +20,7 @@ Add a description here
 * Download and install Mono
 * Clone the repo
 * Run `dotnet restore` from within the project directory
+* Run `dotnet run` to start the server
 
 ## Contribution Requirements
 

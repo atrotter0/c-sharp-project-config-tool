@@ -13,20 +13,25 @@ A simple bash script to create Epicodus C# projects and intialize the git pairs 
 1. Run $ chmod 777 ./config-tool.sh
 1. Run $ ./config-tool.sh
 1. Follow the prompt
-1. Run `dotnet test` from the Project.Tests directory to ensure the project has been built correctly.
+1. After the tool finishes running, run `dotnet restore` from within project folder
+1. Run `dotnet build` and fix any build errors
+1. Run `dotnet run` to start the server
 
 ## Usage
 
 This can:
 * Option to set up your git pairs file at the root directory
 * Option to create a basic C# project structure that includes:
-  * Models directory
-  * ModelTests directory
-  * csproj files
-  * .cs files
+  * Controllers directory
+  * Views directory
+  * Models directory with single class file
+  * ModelTests directory with single test class file
+  * csproj files with ASP.NET and Testing packages
+  * Startup.cs for ASP.NET
+  * Program.cs for ASP.NET
   * README.md
 * Initialize git and git pair in project directory
-* Runs `dotnet restore`
+* Runs `dotnet restore` in test directory
 
 ## Contribution Requirements
 
