@@ -98,7 +98,7 @@ then
   sed "s/$OLD_CLASS/$NEW_CLASS/g" $directoryName/Models/ClassName2.txt > $directoryName/Models/$className.cs
 
   # csproj Tests
-  sed "s/$OLD_PROJECT/$NEW_PROJECT/g" $directoryName.Tests/Project.Tests.txt > $directoryName.Tests/Project.Tests.csproj
+  sed "s/$OLD_PROJECT/$NEW_PROJECT/g" $directoryName.Tests/Project.Tests.txt > $directoryName.Tests/$directoryName.Tests.csproj
 
   # ModelTests
   sed "s/$OLD_PROJECT/$NEW_PROJECT/g" $directoryName.Tests/ModelTests/ClassName.Tests.txt > $directoryName.Tests/ModelTests/ClassName2.Tests.txt
