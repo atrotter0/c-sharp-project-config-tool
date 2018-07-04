@@ -6,7 +6,7 @@ using ProjectNameHere.Models;
 namespace ProjectNameHere.Tests
 {
     [TestClass]
-    public class ClassNameHere
+    public class ClassNameHereTest
     {
 
     }
