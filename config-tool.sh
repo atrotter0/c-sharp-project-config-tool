@@ -64,6 +64,8 @@ then
   cd $projectName
   cp -R $baseDirectory/assets/Project ~/Desktop/$projectName
   cp -R $baseDirectory/assets/Project.Tests ~/Desktop/$projectName
+  cp -R $baseDirectory/assets/Project/Controllers ~/Desktop/$projectName/Project/
+  cp -R $baseDirectory/assets/Project/Views ~/Desktop/$projectName/Project/
   cp $baseDirectory/assets/README.md ~/Desktop/$projectName
   cp $baseDirectory/assets/.gitignore ~/Desktop/$projectName
 

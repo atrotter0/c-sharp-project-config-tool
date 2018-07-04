@@ -4,7 +4,7 @@
 
 ## Description
 
-A simple bash script to create Epicodus C# projects and intialize the git pairs file.
+A simple bash script to create Epicodus C# projects and initialize the git pairs file.
 
 ## Setup
 
@@ -19,18 +19,17 @@ A simple bash script to create Epicodus C# projects and intialize the git pairs 
 
 ## Usage
 
-This can:
-* Option to set up your git pairs file at the root directory
-* Option to create a basic C# project structure that includes:
+* Option available to set up your git pairs file at the root directory
+* Option available to create a basic C# project structure that includes:
   * Controllers directory
   * Views directory
   * Models directory with single class file
   * ModelTests directory with single test class file
-  * csproj files with ASP.NET and Testing packages
+  * csproj files with ASP.NET and testing packages
   * Startup.cs for ASP.NET
   * Program.cs for ASP.NET
-  * README.md
-* Initialize git and git pair in project directory
+  * README.md outline
+* Initializes git and git pair in project directory
 * Runs `dotnet restore` in test directory
 
 ## Contribution Requirements
