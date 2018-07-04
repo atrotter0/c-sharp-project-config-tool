@@ -19,7 +19,9 @@ Add a description here
 * Download and install .Net Core 1.1.4
 * Download and install Mono
 * Clone the repo
-* Run `dotnet restore` from within the project directory
+* Run `dotnet restore` from project directory and test directory to install packages
+* Run `dotnet build` from project directory and fix any build errors
+* Run `dotnet test` from the test directory to run the testing suite
 * Run `dotnet run` to start the server
 
 ## Contribution Requirements
