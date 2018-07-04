@@ -1,0 +1,14 @@
+using Microsoft.AspNetCore.Mvc;
+using ProjectNameHere.Models;
+
+namespace ProjectNameHere.Controllers
+{
+    public class HomeController : Controller
+    {
+        [HttpGet("/")]
+        public ActionResult Index()
+        {
+            return View();
+        }
+    }
+}
