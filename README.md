@@ -4,33 +4,36 @@
 
 ## Description
 
-A simple bash script to create Epicodus C# projects and initialize the git pairs file.
+A simple bash script to create Epicodus C# ASP.NET projects and initialize the git pairs file.
 
 ## Setup
 
+1. Download and install .NET 1.1.4
 1. Clone the repo
 1. Navigate into the clone directory
 1. Run $ chmod 777 ./config-tool.sh
 1. Run $ ./config-tool.sh
 1. Follow the prompt
-1. After the tool finishes running, run `dotnet restore` from within project folder
-1. Run `dotnet build` and fix any build errors
+1. Run `dotnet build` from project directory and fix any build errors
+1. Run `dotnet test` from the test directory to run the testing suite
 1. Run `dotnet run` to start the server
 
 ## Usage
 
 * Option available to set up your git pairs file at the root directory
-* Option available to create a basic C# project structure that includes:
-  * Controllers directory
-  * Views directory
+* Option available to create a base C# ASP.NET project that includes:
+  * Controllers directory with single HomeController file
+  * Views directory with basic index view and Layout partial
   * Models directory with single class file
   * ModelTests directory with single test class file
+  * ControllerTests directory with single test class file
   * csproj files with ASP.NET and testing packages
   * Startup.cs for ASP.NET
   * Program.cs for ASP.NET
+  * wwwwroot directory for static assets
   * README.md outline
 * Initializes git and git pair in project directory
-* Runs `dotnet restore` in test directory
+* Installs packages with `dotnet restore` in test directory and project directory
 
 ## Contribution Requirements
 
@@ -41,6 +44,7 @@ A simple bash script to create Epicodus C# projects and initialize the git pairs
 
 ## Technologies Used
 
+* .NET 1.1.4
 * Bash
 * Git
 
