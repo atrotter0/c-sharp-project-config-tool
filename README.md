@@ -30,7 +30,7 @@ A simple bash script to create Epicodus C# ASP.NET projects and initialize the g
   * csproj files with ASP.NET and testing packages
   * Startup.cs for ASP.NET
   * Program.cs for ASP.NET
-  * wwwwroot directory for static assets
+  * wwwroot directory for static assets
   * README.md outline
 * Initializes git and git pair in project directory
 * Installs packages with `dotnet restore` in test directory and project directory
