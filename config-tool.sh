@@ -97,6 +97,9 @@ then
   sed "s/$OLD_PROJECT/$NEW_PROJECT/g" $directoryName/Models/ClassName.txt > $directoryName/Models/ClassName2.txt
   sed "s/$OLD_CLASS/$NEW_CLASS/g" $directoryName/Models/ClassName2.txt > $directoryName/Models/$className.cs
 
+  # Database.cs
+  sed "s/$OLD_PROJECT/$NEW_PROJECT/g" $directoryName/Models/Database.txt > $directoryName/Models/Datbase.cs
+
   # csproj Tests
   sed "s/$OLD_PROJECT/$NEW_PROJECT/g" $directoryName.Tests/Project.Tests.txt > $directoryName.Tests/$directoryName.Tests.csproj
 
@@ -113,6 +116,7 @@ then
   rm $directoryName/Controllers/HomeController.txt
   rm $directoryName/Models/ClassName.txt
   rm $directoryName/Models/ClassName2.txt
+  rm $directoryName/Models/Database.txt
   rm $directoryName.Tests/Project.Tests.txt
   rm $directoryName.Tests/ModelTests/ClassName.Tests.txt
   rm $directoryName.Tests/ModelTests/ClassName2.Tests.txt
