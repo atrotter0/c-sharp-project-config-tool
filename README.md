@@ -17,7 +17,7 @@ A simple bash script to create Epicodus C# ASP.NET projects and initialize the g
 1. Run `dotnet build` from project directory and fix any build errors
 1. Run `dotnet test` from the test directory to run the testing suite
 1. Run `dotnet run` to start the server
-1. Alter 'DbNameHere' in Startup.cs to connect to the database of your choice
+1. Alter `DbNameHere` in Startup.cs to connect to the database of your choice
 
 ## Usage
 
