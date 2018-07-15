@@ -18,11 +18,13 @@ Add a description here
 
 * Download and install .Net Core 1.1.4
 * Download and install Mono
+* Download and install MAMP 4.5
 * Clone the repo
 * Run `dotnet restore` from project directory and test directory to install packages
 * Run `dotnet build` from project directory and fix any build errors
 * Run `dotnet test` from the test directory to run the testing suite
 * Run `dotnet run` to start the server
+* Alternatively, run `dotnet watch run` to start the server with the watcher tool
 
 ## Contribution Requirements
 
@@ -34,6 +36,11 @@ Add a description here
 ## Technologies Used
 
 * .Net Core 1.1.4
+* MAMP 4.5
+* MySQL
+* Bootstrap 3.3.7
+* JavaScript
+* jQuery 3.3.1
 
 ## Links
 
