@@ -4,7 +4,7 @@
 
 ## Description
 
-A simple bash script to create Epicodus C# ASP.NET projects and initialize the git pairs file.
+A simple bash script to create Epicodus C# ASP.NET Core projects and initialize the git pairs file.
 
 ## Setup
 
@@ -24,12 +24,12 @@ A simple bash script to create Epicodus C# ASP.NET projects and initialize the g
 * Option available to set up your git pairs file at the root directory
 * Option available to create a base C# ASP.NET project that includes:
   * Controllers directory with single HomeController file
-  * Views directory with basic index view and Layout partial
+  * Views directory with basic Home/Index view and Shared/Layout and Nav partials
   * Models directory with single class file
   * Database.cs file in Models directory
   * ModelTests directory with single test class file
   * ControllerTests directory with single test class file
-  * csproj files with ASP.NET, testing packages, MySQL Connector, and 
+  * csproj files with ASP.NET MVC, MySQL Connector, TagHelpers, and MSTest packages.
   * Startup.cs for ASP.NET
   * Program.cs for ASP.NET
   * wwwroot directory for static assets
@@ -46,7 +46,7 @@ A simple bash script to create Epicodus C# ASP.NET projects and initialize the g
 
 ## Technologies Used
 
-* .NET 1.1.4
+* C#
 * Bash
 * Git
 
